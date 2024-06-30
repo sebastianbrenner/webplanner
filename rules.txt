@@ -1,0 +1,24 @@
+module.exports = {
+    env: {
+        browser: true,
+        es2021: true,
+        node: true,
+    },
+    extends: ['airbnb', 'airbnb-typescript', 'plugin:react-hooks/recommended'],
+    parserOptions: {
+        ecmaVersion: 12,
+        sourceType: 'module',
+    },
+    rules: {
+        indent: ['error', 4],
+        'no-tabs': ['error', { allowIndentationTabs: true }],
+        'react/function-component-definition': ['error', {
+            namedComponents: 'arrow-function',
+            unnamedComponents: 'arrow-function',
+        }],
+        'max-len': ['warn', { code: 160 }],
+        'import/no-unresolved': ['off', { ignore: ['react'] }],
+        'react/jsx-uses-react': 'warn',
+        'react/react-in-jsx-scope': 'warn',
+    },
+};
